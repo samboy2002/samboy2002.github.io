@@ -1,0 +1,277 @@
+
+.banner {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .img {
+    height: 150px;
+    width: 100%;
+}
+
+.banner .first-img-animation {
+    position: absolute;
+    animation-name: first-img-animation;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+}
+
+@keyframes first-img-animation {
+    0% {
+        left: 100px;
+        opacity: 1;
+    }
+    20%, 70%{
+        left: 0px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.banner .text1 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    animation-name: text1-animation;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+}
+
+@keyframes text1-animation {
+    0% {
+        left: 100px;
+        opacity: 1;
+    }
+    20% {
+        left: 0px;
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    40% {
+        transform: scaleX(-1);
+    }
+    60%, 70% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.banner .text2 {
+    position:absolute;
+    top: 70%;
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    line-height: 50px;
+    text-align: center;
+    animation-name: text2-animation;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+}
+
+@keyframes text2-animation {
+    0% {
+        left: 100px;
+        opacity: 0.8;
+    }
+    20% {
+        left: 0px;
+        color: white;
+    }
+    40% {
+        color: black;
+    }
+    50% {
+        color: white;
+    }
+    60% {
+        color: black;
+    }
+    70% {
+        color: white;
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.banner .second-img-animation {
+    position: absolute;
+    animation-name: second-img-animation;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-delay: 7s;
+}
+
+@keyframes second-img-animation {
+    0% {
+        top: 100%;
+    }
+    20% {
+        top: 0px;
+    }
+}
+
+.banner .text3 {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: white;
+    transform: rotate(-30deg);
+    animation-name: text3-animation;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-delay: 10s;
+    animation-iteration-count: 2;
+}
+
+@keyframes text3-animation {
+    0% {
+        font-size: 100px;
+        opacity: 0;
+        color: darkred;
+    }
+    25% {
+        font-size: 25px;
+        opacity: 1;
+        color: white;
+    }
+    50%, 100% {
+        font-size: 25px;
+        opacity: 0;
+        color: red;
+    }
+}
+
+.banner .text4 {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: white;
+    transform: rotate(-30deg);
+    animation-name: text4-animation;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-delay: 13s;
+    animation-iteration-count: 2;
+}
+
+@keyframes text4-animation {
+    0% {
+        font-size: 100px;
+        opacity: 0;
+        color: darkred;
+    }
+    25% {
+        font-size: 25px;
+        opacity: 1;
+        color: white;
+    }
+    50%, 100% {
+        opacity: 0;
+        color: red;
+    }
+}
+
+.banner .text5 {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    width: 420px;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+    animation-name: text5-animation;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-delay: 7s;
+}
+
+@keyframes text5-animation {
+    0% {
+        bottom: -100%;
+    }
+    10% {
+        bottom: 10px;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.banner .student {
+    position: absolute;
+    background-color: darkorange;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    color: white;
+    animation-name: student-animation;
+    animation-duration: 3s;
+    animation-delay: 24s;
+    animation-fill-mode: both;
+}
+
+@keyframes student-animation {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.banner .student-name {
+    animation-name: student-name;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 27s;
+    animation-iteration-count: 2;
+}
+
+@keyframes student-name {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.banner .student-id {
+    animation-name: student-id;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 27s;
+    animation-iteration-count: 2;
+}
+
+@keyframes student-id {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

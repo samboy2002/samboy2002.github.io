@@ -1,0 +1,20 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0px;
+}
+
+iframe.banner {
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+aside {
+    background-color: lightblue;
+}
