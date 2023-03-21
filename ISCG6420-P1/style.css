@@ -18,3 +18,13 @@ iframe.banner {
 aside {
     background-color: lightblue;
 }
+
+footer {
+    padding: 5px;
+    background-color: grey;
+    color: white;
+    font-size: 9pt;
+}
+footer a {
+    color: white;
+}
