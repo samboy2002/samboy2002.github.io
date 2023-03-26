@@ -1,12 +1,15 @@
 body {
     padding: 0px;
     margin: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin: 0px;
+    height: 400px;
 }
 
 iframe.banner {
@@ -14,9 +17,11 @@ iframe.banner {
     border: none;
     display: block;
 }
-
-aside {
-    background-color: lightblue;
+iframe.car {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
 }
 
 footer {

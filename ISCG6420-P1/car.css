@@ -1,0 +1,374 @@
+body {
+    overflow: hidden;
+}
+.adv-car {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+img.car1 {
+    width: 100%;
+    height: 400px;
+    animation-name: car1;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes car1 {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform:scale(1);
+    }
+}
+
+.suzuki-logo {
+    width: 150px;
+}
+.baleno-logo {
+    width: 200px;
+}
+.text1 {
+    position:absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    font-family: 'Times New Roman';
+    animation-name: text1;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+.text1>div {
+    text-align: center;
+    width: 100%;
+}
+@keyframes text1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text2 {
+    position:absolute;
+    bottom: 110px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight:bold;
+    color: white;
+    font-family: 'Times New Roman';
+    animation-name: text2;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 6s;
+}
+.text3 {
+    position:absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Edwardian Script ITC',cursive;
+    font-size: 50px;
+    color: white;
+    font-weight:bold;
+    animation-name: text3;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 6s;
+}
+
+@keyframes text2 {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text3 {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.text4unit {
+    font-size: 10px;
+    margin: 0px;
+}
+
+.text4 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 15px;
+    color: darkorange;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman';
+    animation-name: text4;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 8s;
+}
+
+@keyframes text4 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.text5 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 15px;
+    color: darkorange;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman';
+    animation-name: text5;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 11s;
+}
+@keyframes text5 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+img.car2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    font-family: 'Times New Roman';
+    animation-name: car2;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 13s;
+}
+
+@keyframes car2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text6, .text7 {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    position:absolute;
+    text-align: center;
+}
+
+.text6 {
+    top: 60px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    animation-name: text6;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 15s;
+}
+.text7 {
+    top: 50px;
+    left: -60px;
+    font-family: 'Edwardian Script ITC',cursive;
+    font-size: 70px;
+    animation-name: text7;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 15s;
+}
+
+@keyframes text6 {
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes text7 {
+    from {
+        left: 200px;
+        opacity: 0;
+    }
+    to {
+        left: -60px;
+        opacity: 1;
+    }
+}
+
+img.car3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    animation-name: car2;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 17s;
+}
+
+.text8, .text9 {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    position:absolute;
+    text-align: center;
+}
+
+.text8 {
+    top: 60px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    animation-name: text8;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 19s;
+}
+.text9 {
+    top: 80px;
+    font-family: 'Edwardian Script ITC',cursive;
+    font-size: 50px;
+    animation-name: text9;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 19s;
+}
+
+@keyframes text8 {
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes text9 {
+    from {
+        left: 200px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+img.car4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    animation-name: car2;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 21s;
+}
+.car4mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 400px;
+    background-color: darkgray;
+    text-align: center;
+    animation-name: car4msk;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 21s;
+}
+
+@keyframes car4msk {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .7;
+    }
+}
+
+.car4mask .suzuki-logo {
+    margin-top: 120px;
+    opacity: 1;
+}
+
+.car4mask .student-name {
+    margin-top: 30px;
+    opacity: 1;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    animation-name: student-name;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 23s;
+}
+
+@keyframes student-name {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.car4mask .student-id {
+    margin-top: 30px;
+    opacity: 1;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    animation-name: student-id;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 23s;
+}
+@keyframes student-id {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
