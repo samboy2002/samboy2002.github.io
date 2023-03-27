@@ -29,7 +29,15 @@ footer {
     background-color: grey;
     color: white;
     font-size: 9pt;
+    height: 22px;
+    line-height: 22px;
 }
 footer a {
     color: white;
+}
+
+#btnReplayCar {
+    position: absolute;
+    right: 10px;
+    display: none;
 }

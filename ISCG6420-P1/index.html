@@ -10,6 +10,14 @@
                     document.getElementById('frmBanner').src="banner.html";
                     document.getElementById('frmCar').src = 'car.html';
                 }, 42000);
+
+                setTimeout(function(){
+                    document.getElementById('btnReplayCar').style.display='inline';
+                }, 68000);
+            }
+
+            function replayCar() {
+                document.getElementById('frmCar').src = 'car.html';
             }
         </script>
     </head>
@@ -27,6 +35,7 @@
         <footer>
             Links: <a href="./Storyboard-banner.pdf">The storyboard of banner</a>
             <a href="./Storyboard-car.pdf">The storyboard of car</a>
+            <button id="btnReplayCar" onclick="replayCar()">Replay Car Advertisement</button>
         </footer>
     </body>
 </html>

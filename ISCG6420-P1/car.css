@@ -62,7 +62,7 @@ img.car1 {
     text-align: center;
     font-size: 15px;
     font-weight:bold;
-    color: white;
+    color: lightcyan;
     font-family: 'Times New Roman';
     animation-name: text2;
     animation-duration: 2s;
@@ -76,7 +76,7 @@ img.car1 {
     text-align: center;
     font-family: 'Edwardian Script ITC',cursive;
     font-size: 50px;
-    color: white;
+    color: lightcyan;
     font-weight:bold;
     animation-name: text3;
     animation-duration: 2s;
@@ -182,7 +182,7 @@ img.car2 {
 
 .text6, .text7 {
     width: 100%;
-    color: white;
+    color: lightcyan;
     font-weight: bold;
     position:absolute;
     text-align: center;
@@ -244,7 +244,7 @@ img.car3 {
 
 .text8, .text9 {
     width: 100%;
-    color: white;
+    color: lightcyan;
     font-weight: bold;
     position:absolute;
     text-align: center;
@@ -335,6 +335,8 @@ img.car4 {
     opacity: 1;
     font-family: 'Times New Roman';
     font-weight: bold;
+    font-size: 20px;
+    color: black;
     animation-name: student-name;
     animation-duration: 3s;
     animation-fill-mode: both;
@@ -357,6 +359,8 @@ img.car4 {
     opacity: 1;
     font-family: 'Times New Roman';
     font-weight: bold;
+    font-size: 20px;
+    color: black;
     animation-name: student-id;
     animation-duration: 3s;
     animation-fill-mode: both;
