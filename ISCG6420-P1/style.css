@@ -7,7 +7,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 3px;
     margin: 0px;
     height: 400px;
 }
@@ -40,4 +41,86 @@ footer a {
     position: absolute;
     right: 10px;
     display: none;
+}
+.right {
+    float: right;
+}
+.btn {
+    padding: 5px;
+    width: 100px;
+    margin-left: 50px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.booking-steps {
+    background-color: lightgray;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.booking-steps ol {
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+.booking-steps li {
+    margin-bottom: 10px;
+    padding: 10px;
+    /* cursor:pointer; */
+}
+
+.booking-steps li.current {
+    background-color: gray;
+}
+
+.booking-form {
+    padding-left: 5px;
+}
+.booking-form footer {
+    background-color: white;
+    margin-top: 30px;
+    padding: 5px 5px 5px 10%;
+    height: 30px;
+}
+
+.input-group {
+    margin-bottom: 15px;;
+}
+.control-label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+.booking-form .tab {
+    display: none;
+}
+.booking-form .tab-current {
+    display: block;
+}
+.tablePreview {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.tablePreview tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.tablePreview td {
+    padding: 1px;
+}
+.tablePreview .label {
+    width: 25%;
+    text-align: right;
+}
+
+#outColor {
+    display: block;
+    width: 50px;
+    height: 20px;
+    background-color: red;
+    border: 1px solid black;
 }

@@ -4,29 +4,164 @@
         <meta charset="UTF-8">
         <title>Rydges Hotel - Home Page</title>
         <link rel="stylesheet" href="style.css">
-        <script>
-            function onLoad() {
-                setTimeout(function(){
-                    document.getElementById('frmBanner').src="banner.html";
-                    document.getElementById('frmCar').src = 'car.html';
-                }, 42000);
-
-                setTimeout(function(){
-                    document.getElementById('btnReplayCar').style.display='inline';
-                }, 68000);
-            }
-
-            function replayCar() {
-                document.getElementById('frmCar').src = 'car.html';
-            }
-        </script>
+        <script type="text/javascript" src="javascript.js"></script>
     </head>
     <body onload="onLoad()">
         <iframe id="frmBanner" src="banner.html" class="banner"></iframe>
         <div class="container">
-            <div class="content">
-                <h2>Part 3</h2>
-                Write a booking system for Rydges Hotel. It should have 4 steps.
+            <div class="booking-steps">
+                <h3>Book your trip</h3>
+                <ol>
+                    <li id="navStep1" class="current">1. Enter Personal Details</li>
+                    <li id="navStep2">2. Enter Trip Details</li>
+                    <li id="navStep3">3. Enter Accommodation Details</li>
+                    <li id="navStep4">4. Preview</li>
+                </ol>
+            </div>
+            <div class="booking-form">
+                <div id="tabStep1" class="tab tab-current">
+                    <h3>Personal Details</h3>
+                    <div class="input-group">
+                        <label class="control-label">First Name: </label>
+                        <input type="text" id="txtFirstName">
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Last Name: </label>
+                        <input type="text" id="txtLastName">
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Phone Number: </label>
+                        <input type="text" id="txtPhoneNumber">
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Gender: </label>
+                        <input type="radio" id="rdGenderFemale" name="gender" value="Female" checked><label for="rdGenderFemale">Female</label>
+                        <input type="radio" id="rdGenderMale"  name="gender" value="Male"><label for="rdGenderMale">Male</label>
+                        <input type="radio" id="rdGenderOther"  name="gender" value="Other"><label for="rdGenderOther">Other</label>
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Number of Adults:</label>
+                        <input type="number" min="1" id="nmAdults" value="1">
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Number of Children:</label>
+                        <input type="number" min="0" id="nmChildren" value="0">
+                    </div>
+                </div>
+                <div id="tabStep2" class="tab">
+                    <h3>Trip Details</h3>
+                    <div class="input-group">
+                        <label class="control-label">City: </label>
+                        <select id="selCity">
+                            <option value="Auckland">Auckland</option>
+                            <option value="Christchurch">Christchurch</option>
+                            <option value="Wellington">Wellington</option>
+                            <option value="Hamilton">Hamilton</option>
+                            <option value="Tauranga">Tauranga</option>
+                            <option value="Lower Hutt">Lower Hutt</option>
+                            <option value="Dunedin">Dunedin</option>
+                            <option value="Palmerston North">Palmerston North</option>
+                            <option value="Napier">Napier</option>
+                            <option value="Porirua">Porirua</option>
+                            <option value="Hibiscus Coast">Hibiscus Coast</option>
+                            <option value="New Plymouth">New Plymouth</option>
+                            <option value="Rotorua">Rotorua</option>
+                            <option value="Whangārei">Whangārei</option>
+                            <option value="Nelson">Nelson</option>
+                            <option value="Invercargill">Invercargill</option>
+                            <option value="Upper Hutt">Upper Hutt</option>
+                            <option value="Upper Hutt">Upper Hutt</option>
+                            <option value="Whanganui">Whanganui</option>
+                            <option value="Gisborne">Gisborne</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Date Travel: </label>
+                        <input type="date" id="txtDateTravel">
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Date Return: </label>
+                        <input type="date" id="txtDateReturn">
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Arrival Time: </label>
+                        <input type="radio" id="rdArrivalMorning" name="arrivalTime" value="Morning" checked><label for="rdArrivalMorning">Morning</label>
+                        <input type="radio" id="rdArrivalAfternoon" name="arrivalTime" value="Afternoon"><label for="rdArrivalAfternoon">Afternoon</label>
+                        <input type="radio" id="rdArrivalEvening" name="arrivalTime" value="Evening"><label for="rdArrivalEvening">Evening</label>
+                    </div>
+                </div>
+                <div id="tabStep3" class="tab">
+                    <h3>Accommodation Details</h3>
+                    <div class="input-group">
+                        <label class="control-label">Number of Rooms: </label>
+                        <input type="range" min="1" max="4" step="1" id="txtRooms" value="1"><span id="txtRoomsValue">1</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Meals: </label>
+                        <input type="checkbox" id="chkBreakfast" name="meals" value="Breakfast"><label for="chkBreakfast">Breakfast</label>
+                        <input type="checkbox" id="chkLunch" name="meals" value="Lunch"><label for="chkLunch">Lunch</label>
+                        <input type="checkbox" id="chkDinner" name="meals" value="Dinner"><label for="chkDinner">Dinner</label>
+                    </div>
+                    <div class="input-group">
+                        <label class="control-label">Souvenir Lanyard Color:</label><input type="color" id="souvenirColor" class="ml-10" value="#FF0000">
+                    </div>
+                </div>
+                <div id="tabStep4" class="tab">
+                    <h3>Preview Details</h3>
+                    <table class="tablePreview">
+                        <tr>
+                            <td class="label">First Name:</td>
+                            <td><output id="outFirstName">Dapeng</output></td>
+                            <td class="label">Last Name:</td>
+                            <td><output id="outLastName">LI</output></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Phone Number:</td>
+                            <td><output id="outPhoneNumber">123-45678</output></td>
+                            <td class="label">Gender:</td>
+                            <td><output id="outGender">Female</output></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Adults:</td>
+                            <td><output id="outAdults">1</output></td>
+                            <td class="label">Children:</td>
+                            <td><output id="outChildren">0</output></td>
+                        </tr>
+                        <tr>
+                            <td class="label">City:</td>
+                            <td><output id="outCity">Auckland</output></td>
+                            <td class="label">Arrival:</td>
+                            <td><output id="outArrivalTime">Morning</output></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Travel:</td>
+                            <td><output id="outDateTravel">02/03/2023</output></td>
+                            <td class="label">Return:</td>
+                            <td><output id="outDateReturn">05/03/2023</output></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Rooms:</td>
+                            <td><output id="outRooms">1</output></td>
+                            <td class="label">Souvenir Lanyard:</td>
+                            <td><output id="outColor" style="background-color: red; display:block;width: 50px;height: 20px;"></output></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Meals:</td>
+                            <td colspan="3"><output id="outMeals">Breakfast Lunch Dinner</output></td>
+                        </tr>
+                    </table>
+                    <div class="input-group">
+                        <label class="control-label" style="width: 150px;">Email Address:</label><input type="email" id="txtEmail">
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="chkReceiveEmail">
+                        <label for="chkReceiveEmail" style="font-size: 14px;">I want to receive text messages from Rydges Hotel.</label>
+                    </div>
+                </div>
+                <footer class="clear">
+                    <button id="cmdPrevious" class="btn" onclick="previousStep()" disabled="disabled">Previous</button>
+                    <button id="cmdNext" class="btn" onclick="nextStep()">Next</button>
+                </footer>
             </div>
             <aside>
                 <iframe id="frmCar" src="car.html" class="car"></iframe>
@@ -35,6 +170,7 @@
         <footer>
             Links: <a href="./Storyboard-banner.pdf">The storyboard of banner</a>
             <a href="./Storyboard-car.pdf">The storyboard of car</a>
+            <a href="./Storyboard-Booking.pdf">The storyboard of booking</a>
             <button id="btnReplayCar" onclick="replayCar()">Replay Car Advertisement</button>
         </footer>
     </body>
