@@ -1,0 +1,12 @@
+#gameArea {
+    margin-top: 20px;
+}
+
+.ctl-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ctl-buttons button {
+    margin-right: 20px;
+}

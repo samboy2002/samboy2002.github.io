@@ -1,0 +1,142 @@
+
+#boatLayout {
+    margin: 10px;
+}
+#boatLayout.tere {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+}
+#boatLayout.nui {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+}
+
+.seat {
+    height: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.seat.available {
+    background-color: lightgreen;
+}
+.seat.available:hover {
+    background-color: yellow;
+}
+.seat.disabled {
+    background-color: white;
+    border: 0;
+}
+.seat.ordered {
+    background-color:cornflowerblue;
+}
+.seat.booked {
+    background-color: lightcoral;
+}
+.seat.confirmed {
+    background-color: darkred;
+}
+
+.detail-seat {
+    list-style-type: none;
+    padding: 0;
+}
+.detail-seat li {
+    height: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+    clear: both;
+}
+.detail-seat .number {
+    float: left;
+}
+.detail-seat .price {
+    float: right;
+}
+
+#totalSeatPrice, #totalMenuPrice, #totalPrice {
+    font-weight: bold;
+    border-top: 3px solid darkgray;
+    text-align: center;
+}
+
+.booking-info > div {
+    margin-bottom: 5px;
+    border-bottom: 1px solid darkgray;
+}
+.booking-info .booking-info-label {
+    font-weight: bold;
+}
+.booking-info .booking-info-field {
+    color: darkblue;
+    margin-left: 5px;
+}
+
+.weather {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+.weather span {
+    color: lightcoral;
+}
+
+.menu-item {
+    clear: both;
+}
+.menu-image {
+    width: 100px;
+    height: 100px;
+}
+.menu-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+.menu-item-amount {
+    width: 50px;
+    float: right;
+}
+.menu-price {
+    font-size: 15px;
+    font-weight: bold;
+}
+.menu-indication {
+    margin-left: 20px;
+}
+#cfrmMeals {
+    list-style: none;
+    padding: 0;
+}
+#cfrmMeals li {
+    height: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+    clear: both;
+}
+#totalPrice {
+    margin-top: 30px;
+    text-align: right;
+}
+#cfrmMeals .menu-name {
+    float: left;
+    font-weight: normal;
+    font-size: 15px;
+}
+#cfrmMeals .menu-price {
+    float: right;
+    font-weight: normal;
+}
+
+.order-confirmed {
+    height: 50px;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}

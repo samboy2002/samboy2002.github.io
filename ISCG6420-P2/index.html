@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ISCG 6420 Project 2</title>
+    <link rel="stylesheet" href="./stylesheets/stylesheet.css" />
+    <link rel="stylesheet" href="./stylesheets/boat.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./javascript/jquery-dateformat.js"></script>
+</head>
+
+<body>
+    <h1>Wakatipu Boat Adventure</h1>
+    <div class="container">
+        <nav class="row">
+            <div class="col3 nav-item current">
+                <a href="index.html">Book Boat</a>
+            </div>
+            <div class="col3 nav-item"><a href="game.html">Play Game</a></div>
+            <div class="col3 nav-item"><a href="./docs/task-1.pdf" target="_blank">Document Part 1</a></div>
+            <div class="col3 nav-item"><a href="./docs/task-2.pdf" target="_blank">Document Part 2</a></div>
+        </nav>
+        <div class="weather">
+            <span id='today'>20/05/2023</span>, the weather in <span id="city">Auckland</span> is <span id='weather'>rain</span> and the temperature is <span id="temperature">23</span> Celsius.
+        </div>
+        <form class="form">
+            <div class="row" id="step1">
+                <div class="col12">
+                    <h2>Book Boat Information</h2>
+                    <div class="input-group">
+                        <label class="input-label">Book Date:</label>
+                        <input class="input-field" type="date" id="txtBookingDate" />
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Book Time:</label>
+                        <select class="input-field" id="selBookTime">
+                            <option value="10">10:00</option>
+                            <option value="11">11:00</option>
+                            <option value="12">12:00</option>
+                            <option value="13">13:00</option>
+                            <option value="14">14:00</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Chose Boat:</label>
+                        <select class="input-field" id="selBoatName">
+                            <option value="Tere Boat">Tere Boat</option>
+                            <option value="Nui Boat">Nui Boat</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">The number of people:</label>
+                        <input class="input-field" type="number" id="numPeople" min="1" max="50" value="1" />
+                    </div>
+                    <h2>Contact Information</h2>
+                    <div class="input-group">
+                        <label class="input-label">First Name:</label>
+                        <input class="input-field" id="txtFirstName" required />
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Last Name:</label>
+                        <input class="input-field" id="txtLastName" required />
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Email Address:</label>
+                        <input class="input-field" type="email" id="txtEmail" required />
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Mobile Phone:</label>
+                        <input class="input-field" type="phone" id="txtPhone" />
+                    </div>
+                </div>
+            </div><!-- End step 1 -->
+            <div class="row hide" id="step2">
+                <div class="col12">
+                    <div>
+                        <h2>Booking Information:</h2>
+                        <div class="booking-info row">
+                            <div class="col6">
+                                <lable class="booking-info-label">Bokking Date:</lable>
+                                <span class="booking-info-field" id="s2_booking_date">20/03/2023</span>
+                            </div>
+                            <div class="col6">
+                                <lable class="booking-info-label">Bokking Time:</lable>
+                                <span class="booking-info-field" id="s2_booking_time">10:00</span>
+                            </div>
+                            <div class="col6">
+                                <lable class="booking-info-label">Boat Name:</lable>
+                                <span class="booking-info-field" id="s2_booking_boat">Tere Boat</span>
+                            </div>
+                            <div class="col6">
+                                <lable class="booking-info-label">The number of people:</lable>
+                                <span class="booking-info-field" id="s2_booking_people">10</span>
+                            </div>
+                        </div><!-- End Booking Information -->
+                        <h2>Contact Information:</h2>
+                        <div class="booking-info row">
+                            <div class="col6">
+                                <lable class="booking-info-label">First Name:</lable>
+                                <span class="booking-info-field" id="s2_booking_fname">Dapeng</span>
+                            </div>
+                            <div class="col6">
+                                <lable class="booking-info-label">Last Name:</lable>
+                                <span class="booking-info-field" id="s2_booking_lname">LI</span>
+                            </div>
+                            <div class="col6">
+                                <lable class="booking-info-label">Email Address:</lable>
+                                <span class="booking-info-field" id="s2_booking_email">samboy2002@gmail.com</span>
+                            </div>
+                            <div class="col6">
+                                <lable class="booking-info-label">Mobile Phone:</lable>
+                                <span class="booking-info-field" id="s2_booking_phone">021 08 234567</span>
+                            </div>
+                        </div><!-- End Contact Information -->
+                    </div>
+                    <h2><span id="boatName"></span> Information</h2>
+                    <div class="row">
+                        <div class="col6">
+                            <h3>Tere Boat Seats:</h3>
+                            <div id="boatLayout"></div>
+                        </div><!-- End Boat Information -->
+                        <div class="col6">
+                            <h3>Choose Seats:</h3>
+                            <div id="detail-info">
+                                <ol class="detail-seat"></ol>
+                            </div>
+                            <div id="totalSeatPrice">
+                                <strong>Sub Total:</strong>
+                                <span>$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End step 2 -->
+            <div id="step3" class="row hide">
+                <h3 class="col12">Populate Boat Menu</h3>
+                <div id="menuList" class="col12"></div>
+                <div id="totalMenuPrice" class="col12">
+                    <strong>Sub Total:</strong>
+                    <span>$0.00</span>
+                </div>
+            </div><!-- End step 3 -->
+            <div id="step4" class="row hide">
+                <div class="col12">
+                    <h2>Booking Information:</h2>
+                    <div class="booking-info row">
+                        <div class="col6">
+                            <lable class="booking-info-label">Bokking Date:</lable>
+                            <span class="booking-info-field" id="s4_booking_date">20/03/2023</span>
+                        </div>
+                        <div class="col6">
+                            <lable class="booking-info-label">Bokking Time:</lable>
+                            <span class="booking-info-field" id="s4_booking_time">10:00</span>
+                        </div>
+                        <div class="col6">
+                            <lable class="booking-info-label">Boat Name:</lable>
+                            <span class="booking-info-field" id="s4_booking_boat">Tere Boat</span>
+                        </div>
+                        <div class="col6">
+                            <lable class="booking-info-label">The number of people:</lable>
+                            <span class="booking-info-field" id="s4_booking_people">10</span>
+                        </div>
+                    </div><!-- End Booking Information -->
+                    <h2>Contact Information:</h2>
+                    <div class="booking-info row">
+                        <div class="col6">
+                            <lable class="booking-info-label">First Name:</lable>
+                            <span class="booking-info-field" id="s4_booking_fname">Dapeng</span>
+                        </div>
+                        <div class="col6">
+                            <lable class="booking-info-label">Last Name:</lable>
+                            <span class="booking-info-field" id="s4_booking_lname">LI</span>
+                        </div>
+                        <div class="col6">
+                            <lable class="booking-info-label">Email Address:</lable>
+                            <span class="booking-info-field" id="s4_booking_email">samboy2002@gmail.com</span>
+                        </div>
+                        <div class="col6">
+                            <lable class="booking-info-label">Mobile Phone:</lable>
+                            <span class="booking-info-field" id="s4_booking_phone">021 08 234567</span>
+                        </div>
+                    </div><!-- End Contact Information -->
+                    <h2>Booking Confirmation</h2>
+                    <h3>Your seats on <span id="cfrmBoatName">Tere Boat:</span></h3>
+                    <div id="cfrmSeats">
+                        <ol class="detail-seat">
+                            <li><label class="number">3-8</label><label class="price">$25.00</label></li>
+                        </ol>
+                    </div>
+                    <h3>Your ordered meals:</h3>
+                    <ol id="cfrmMeals">
+                        <li>
+                            <div class="menu-name">Vegetable Soup  x2</div>
+                            <div class="menu-price">$22.00</div>
+                        </li>
+                    </ol>
+                </div>
+                <div id="totalPrice" class="col12">
+                    <strong>Total:</strong>
+                    <span>$0.00</span>
+                </div>
+            </div><!-- End step 4 -->
+            <div id="step5" class="row hide">
+                <h3 class="order-confirmed">Thanks for your booking!!!</h3>
+            </div>
+        </form>
+        <div class="row">
+            <div class="button-bar">
+                <button class="btn" id="btnPrevious" disabled>
+                    Previous
+                </button>
+                <button class="btn" id="btnNext">Next</button>
+                <button class="btn right hide" id="btnBookingAgain">Booking Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="./javascript/boat.class.js"></script>
+    <script src="./javascript/menu.class.js"></script>
+    <script src="./javascript/book_boat.js"></script>
+    <script src="./javascript/functions.js"></script>
+</body>
+
+</html>
