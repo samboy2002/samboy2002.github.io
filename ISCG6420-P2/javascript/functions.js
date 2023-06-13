@@ -179,7 +179,7 @@ async function queryWeather() {
         console.log('The response of weather: ', data);
         $('#today').text(new Date().toLocaleDateString());
         $('#city').text(city);
-        $('weather').text(data.weather[0].description);
+        $('#weather').text(data.weather[0].description);
         $('#temperature').text(data.main.temp);
       })
       .catch((error) => console.error(error));
